@@ -91,3 +91,14 @@ if (debug && !test()) {
   debug?.info('perfect');
 }
 ```
+
+## Browser Usage
+
+NullishLogger works just as well in browser as it does in Node.
+
+```html
+<script type="module">
+  import { debug } from 'https://unpkg.com/nullish-logger/nullish-logger.min.js';
+  debug?.log('Browser logging works!');
+</script>
+```

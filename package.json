@@ -1,6 +1,6 @@
 {
   "name": "nullish-logger",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A lightweight, configurable javascript console wrapper with selective method suppression",
   "main": "nullish-logger.js",
   "type": "module",
@@ -14,6 +14,7 @@
   "homepage": "https://github.com/besworks/NullishLogger#readme",
   "files": [
     "nullish-logger.js",
+    "nullish-logger.min.js",
     "README.md"
   ],
   "keywords": [
@@ -23,11 +24,16 @@
     "development"
   ],
   "scripts": {
-    "test": "node nullish-logger.test.js"
+    "test": "node nullish-logger.test.js",
+    "build": "esbuild nullish-logger.js --bundle --minify --sourcemap --format=esm --outfile=nullish-logger.min.js",
+    "prepublishOnly": "npm run build"
   },
   "author": {
     "name": "Russell Beswick",
     "url": "https://bes.works"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  }
 }
