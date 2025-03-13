@@ -1,5 +1,5 @@
 # NullishLogger
-[![npm version](https://badge.fury.io/js/nullish-logger.svg)](https://www.npmjs.com/package/nullish-logger)
+[![npm version](https://img.shields.io/npm/v/nullish-logger)](https://www.npmjs.com/package/nullish-logger)
 
 A lightweight, configurable javascript console wrapper with selective method suppression. Perfect for toggling debug output without removing logging code.
 
