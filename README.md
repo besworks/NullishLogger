@@ -1,5 +1,4 @@
-# NullishConsole
-
+# NullishLogger
 [![npm version](https://badge.fury.io/js/nullish-logger.svg)](https://www.npmjs.com/package/nullish-logger)
 
 A lightweight, configurable javascript console wrapper with selective method suppression. Perfect for toggling debug output without removing logging code.
@@ -23,7 +22,7 @@ npm install nullish-logger
 ## Basic Usage
 
 ```javascript
-import { debug } from './nullish-console.js';
+import { debug } from 'nullish-logger';
 debug?.log('This works like console.log');
 debug?.table({ 'tested' : true });
 debug?.info('all console features are available');
@@ -34,23 +33,23 @@ to access the methods.
 
 ### Change Settings On The Fly
 ```javascript
-import { instance as nc, debug } from './nullish-console.js';
-nc.enabled = false;
+import { instance as nl, debug } from 'nullish-logger';
+nl.enabled = false;
 debug?.log('suppressed');
-nc.enabled = true;
+nl.enabled = true;
 debug?.log('now it works');
 debug?.warn('suppressed');
-nc.quiet = false;
+nl.quiet = false;
 debug?.warn('not suppressed anymore');
 ```
 
 ### Custom Configuration
 
 ```javascript
-import { NullishConsole } from './nullish-console.js';
-const nc = new NullishConsole();
-nc.suppress = [ 'error', 'warn' ];
-const debug = nc.logger;
+import { NullishLogger } from 'nullish-logger';
+const nl = new NullishLogger();
+nl.suppress = [ 'error', 'warn' ];
+const debug = nl.logger;
 debug?.error('suppressed');
 debug?.warn('also suppressed');
 debug?.info('works');
@@ -69,11 +68,11 @@ debug?.info('works');
 Automatically enable/disable verbose logging based on the detected environment.
 
 ```javascript
-import { instance as nc, debug } from './nullish-console.js';
-const debug = new NullishConsole().logger;
+import { instance as nl, debug } from 'nullish-logger';
+const debug = new NullishLogger().logger;
 
 if (process.env.NODE_ENV === 'production') {
-    nc.enabled = false;
+    nl.enabled = false;
 }
 
 debug?.log('Initializing...'); // only outputs in dev env

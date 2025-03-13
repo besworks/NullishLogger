@@ -1,4 +1,4 @@
-class NullishConsole {
+class NullishLogger {
   #enabled = true;
   #quiet = true;
   #suppress = ['info', 'warn'];
@@ -65,11 +65,11 @@ class NullishConsole {
   }
 }
 
-const instance = new NullishConsole();
+const instance = new NullishLogger();
 const debug = instance.logger;
 
 export {
-  NullishConsole,
+  NullishLogger,
   instance,
   debug
 }

@@ -1,7 +1,7 @@
-import { NullishConsole, debug } from './nullish-logger.js';
+import { NullishLogger, debug } from './nullish-logger.js';
 
 // Create test instance
-const debugConsole = new NullishConsole();
+const debugConsole = new NullishLogger();
 
 // Test output capture
 const testOutput = {
@@ -33,10 +33,10 @@ try {
     // Import the instance specifically to test
     const { instance } = await import('./nullish-logger.js');
     
-    // Verify it's a NullishConsole instance
+    // Verify it's a NullishLogger instance
     originalConsole.assert(
-        instance instanceof NullishConsole,
-        'Exported instance is not a NullishConsole'
+        instance instanceof NullishLogger,
+        'Exported instance is not a NullishLogger'
     );
     
     // Test the instance works
