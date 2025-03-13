@@ -1,5 +1,7 @@
 # NullishConsole
 
+[![npm version](https://badge.fury.io/js/nullish-logger.svg)](https://www.npmjs.com/package/nullish-logger)
+
 A lightweight, configurable javascript console wrapper with selective method suppression. Perfect for toggling debug output without removing logging code.
 
 ## Features
@@ -11,6 +13,12 @@ A lightweight, configurable javascript console wrapper with selective method sup
 - Preserves original console behavior
 - Zero global scope pollution
 - Terse syntax
+
+## Installation
+
+```bash
+npm install nullish-logger
+```
 
 ## Basic Usage
 
