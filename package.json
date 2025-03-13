@@ -1,17 +1,17 @@
 {
   "name": "nullish-logger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A lightweight, configurable javascript console wrapper with selective method suppression",
   "main": "nullish-logger.js",
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/besworks/nullish-logger.git"
+    "url": "git+https://github.com/besworks/NullishLogger.git"
   },
   "bugs": {
-    "url": "https://github.com/besworks/nullish-logger/issues"
+    "url": "https://github.com/besworks/NullishLogger/issues"
   },
-  "homepage": "https://github.com/besworks/nullish-logger#readme",
+  "homepage": "https://github.com/besworks/NullishLogger#readme",
   "files": [
     "nullish-logger.js",
     "README.md"
