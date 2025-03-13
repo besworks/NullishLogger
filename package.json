@@ -1,6 +1,6 @@
 {
   "name": "nullish-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A lightweight, configurable javascript console wrapper with selective method suppression",
   "main": "nullish-logger.js",
   "type": "module",
